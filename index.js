@@ -27,5 +27,5 @@ http.createServer(function(req, res) {
         }
     });
 }).listen(PORT, function() {
-    console.log("Sever started on port: 8080")
+    console.log(`Sever started on port: ${PORT}`)
 });
