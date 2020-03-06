@@ -2,6 +2,8 @@ let http = require('http');
 let fs = require('fs');
 let url = require('url');
 
+const PORT = process.env.Port || 8080;
+
 http.createServer(function(req, res) {
     let q = url.parse(req.url, true);
     let filename;
@@ -24,6 +26,6 @@ http.createServer(function(req, res) {
             return res.end();
         }
     });
-}).listen(8080, function() {
+}).listen(PORT, function() {
     console.log("Sever started on port: 8080")
 });
